@@ -20,7 +20,9 @@ const Movie = sequelize.define('Movie', {
     },
     status: {
         type: DataTypes.STRING,
-    },
+    }
+}, {
+    timestamps: true, // Enable timestamps
 });
 
 module.exports = Movie;
