@@ -10,7 +10,7 @@ sequelize.sync({ force: true })
         const hashedPassword = await hash('securepassword', salt);
 
         // Create a new user
-        /*const newUser = await User.create({
+        const newUser = await User.create({
             name: 'John Doe',
             username: 'johndoe',
             email: 'john.doe@example.com',
