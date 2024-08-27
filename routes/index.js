@@ -28,7 +28,7 @@ const authenticateToken = (req, res, next) => {
     });
 };
 
-router.use(authenticateToken);
+//router.use(authenticateToken);
 router.get('/movies', async (req, res) => {
     try {
       const movies = await Movie.findAll();
