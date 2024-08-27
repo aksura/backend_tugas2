@@ -1,0 +1,18 @@
+version: '3.9'
+services:
+  app:
+    build: .
+    container_name: app
+    restart: always
+    environment:
+      - JWT_SECRET=SariRoti
+      - DB_HOST=meticulous-empathy.railway.internal
+      - DB_PORT=5432
+      - DB_NAME=railway
+      - DB_USER=postgres
+      - DB_PASS=JQpKJseAmsqftdTQUubrMLkcPNrJRhAv
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app # host:container
+      - /app/node_modules
